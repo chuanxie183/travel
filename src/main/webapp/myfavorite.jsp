@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -34,7 +35,7 @@
                         <div role="tabpanel" class="tab-pane active" id="home">
                             <div class="row">
                                 <div class="col-md-3">
-                                    <a href="route_detail.html">
+                                    <a href="route_detail.jsp">
                                         <img src="images/collection_pic.jpg" alt="">
                                         <div class="has_border">
                                             <h3>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</h3>
@@ -43,7 +44,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-3">
-                                    <a href="route_detail.html">
+                                    <a href="route_detail.jsp">
                                         <img src="images/collection_pic.jpg" alt="">
                                         <div class="has_border">
                                             <h3>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</h3>
@@ -52,7 +53,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-3">
-                                    <a href="route_detail.html">
+                                    <a href="route_detail.jsp">
                                         <img src="images/collection_pic.jpg" alt="">
                                         <div class="has_border">
                                             <h3>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</h3>
@@ -61,7 +62,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-3">
-                                    <a href="route_detail.html">
+                                    <a href="route_detail.jsp">
                                         <img src="images/collection_pic.jpg" alt="">
                                         <div class="has_border">
                                             <h3>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</h3>
@@ -70,7 +71,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-3">
-                                    <a href="route_detail.html">
+                                    <a href="route_detail.jsp">
                                         <img src="images/collection_pic.jpg" alt="">
                                         <div class="has_border">
                                             <h3>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</h3>
@@ -79,7 +80,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-3">
-                                    <a href="route_detail.html">
+                                    <a href="route_detail.jsp">
                                         <img src="images/collection_pic.jpg" alt="">
                                         <div class="has_border">
                                             <h3>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</h3>
@@ -88,7 +89,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-3">
-                                    <a href="route_detail.html">
+                                    <a href="route_detail.jsp">
                                         <img src="images/collection_pic.jpg" alt="">
                                         <div class="has_border">
                                             <h3>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</h3>
@@ -97,7 +98,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-3">
-                                    <a href="route_detail.html">
+                                    <a href="route_detail.jsp">
                                         <img src="images/collection_pic.jpg" alt="">
                                         <div class="has_border">
                                             <h3>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</h3>
@@ -106,7 +107,7 @@
                                     </a>
                                 </div>
                                  <div class="col-md-3">
-                                    <a href="route_detail.html">
+                                    <a href="route_detail.jsp">
                                         <img src="images/collection_pic.jpg" alt="">
                                         <div class="has_border">
                                             <h3>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</h3>
@@ -115,7 +116,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-3">
-                                    <a href="route_detail.html">
+                                    <a href="route_detail.jsp">
                                         <img src="images/collection_pic.jpg" alt="">
                                         <div class="has_border">
                                             <h3>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</h3>
@@ -124,7 +125,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-3">
-                                    <a href="route_detail.html">
+                                    <a href="route_detail.jsp">
                                         <img src="images/collection_pic.jpg" alt="">
                                         <div class="has_border">
                                             <h3>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</h3>

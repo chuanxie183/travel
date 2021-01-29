@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -22,8 +23,8 @@
                 <ul>
                     <li>
                         <span class="num one">1</span>
-                        <a href="route_detail.html"><img src="images/jiangxuan_4.jpg" alt=""></a>
-                        <h4><a href="route_detail.html">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
+                        <a href="route_detail.jsp"><img src="images/jiangxuan_4.jpg" alt=""></a>
+                        <h4><a href="route_detail.jsp">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
                         <p>
                             <b class="price">&yen;<span>899</span>起</b>
                             <span class="shouchang">已收藏450次</span>
@@ -31,8 +32,8 @@
                     </li>
                     <li>
                         <span class="num two">2</span>
-                         <a href="route_detail.html"><img src="images/jiangxuan_4.jpg" alt=""></a>
-                        <h4><a href="route_detail.html">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
+                         <a href="route_detail.jsp"><img src="images/jiangxuan_4.jpg" alt=""></a>
+                        <h4><a href="route_detail.jsp">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
                         <p>
                             <b class="price">&yen;<span>899</span>起</b>
                             <span class="shouchang">已收藏450次</span>
@@ -40,8 +41,8 @@
                     </li>
                     <li>
                         <span class="num">3</span>
-                         <a href="route_detail.html"><img src="images/jiangxuan_4.jpg" alt=""></a>
-                        <h4><a href="route_detail.html">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
+                         <a href="route_detail.jsp"><img src="images/jiangxuan_4.jpg" alt=""></a>
+                        <h4><a href="route_detail.jsp">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
                         <p>
                             <b class="price">&yen;<span>899</span>起</b>
                             <span class="shouchang">已收藏450次</span>
@@ -49,8 +50,8 @@
                     </li>
                     <li>
                         <span class="num">4</span>
-                         <a href="route_detail.html"><img src="images/jiangxuan_4.jpg" alt=""></a>
-                        <h4><a href="route_detail.html">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
+                         <a href="route_detail.jsp"><img src="images/jiangxuan_4.jpg" alt=""></a>
+                        <h4><a href="route_detail.jsp">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
                         <p>
                             <b class="price">&yen;<span>899</span>起</b>
                             <span class="shouchang">已收藏450次</span>
@@ -58,8 +59,8 @@
                     </li>
                     <li>
                         <span class="num">5</span>
-                         <a href="route_detail.html"><img src="images/jiangxuan_4.jpg" alt=""></a>
-                        <h4><a href="route_detail.html">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
+                         <a href="route_detail.jsp"><img src="images/jiangxuan_4.jpg" alt=""></a>
+                        <h4><a href="route_detail.jsp">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
                         <p>
                             <b class="price">&yen;<span>899</span>起</b>
                             <span class="shouchang">已收藏450次</span>
@@ -67,8 +68,8 @@
                     </li>
                     <li>
                         <span class="num">6</span>
-                         <a href="route_detail.html"><img src="images/jiangxuan_4.jpg" alt=""></a>
-                        <h4><a href="route_detail.html">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
+                         <a href="route_detail.jsp"><img src="images/jiangxuan_4.jpg" alt=""></a>
+                        <h4><a href="route_detail.jsp">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
                         <p>
                             <b class="price">&yen;<span>899</span>起</b>
                             <span class="shouchang">已收藏450次</span>
@@ -76,8 +77,8 @@
                     </li>
                     <li>
                         <span class="num">7</span>
-                         <a href="route_detail.html"><img src="images/jiangxuan_4.jpg" alt=""></a>
-                        <h4><a href="route_detail.html">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
+                         <a href="route_detail.jsp"><img src="images/jiangxuan_4.jpg" alt=""></a>
+                        <h4><a href="route_detail.jsp">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
                         <p>
                             <b class="price">&yen;<span>899</span>起</b>
                             <span class="shouchang">已收藏450次</span>
@@ -85,8 +86,8 @@
                     </li>
                     <li>
                         <span class="num">8</span>
-                        <a href="route_detail.html"><img src="images/jiangxuan_4.jpg" alt=""></a>
-                        <h4><a href="route_detail.html">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
+                        <a href="route_detail.jsp"><img src="images/jiangxuan_4.jpg" alt=""></a>
+                        <h4><a href="route_detail.jsp">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
                         <p>
                             <b class="price">&yen;<span>899</span>起</b>
                             <span class="shouchang">已收藏450次</span>
