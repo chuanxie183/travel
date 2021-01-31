@@ -1,3 +1,4 @@
+<%@ page import="java.net.URLDecoder" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -22,6 +23,31 @@
 </head>
 
 <body>
+
+	<%
+		String username = null;
+		String password = null;
+		Cookie [] cookies = request.getCookies();
+		if(cookies!=null){
+			for (Cookie cookie : cookies) {
+				if(cookie!=null){
+					if(cookie.getName().equals("username")){
+						username = URLDecoder.decode(cookie.getValue(),"UTF-8");
+					}
+					if(cookie.getName().equals("password")){
+						password = cookie.getValue();
+					}
+				}
+			}
+		}
+		if(username!=null && password!=null){
+			request.getRequestDispatcher(request.getContextPath()+"user?method=login&code=free&username="+username+"$password="+password).forward(request,response);
+		}
+
+
+	%>
+
+
 <!--引入头部-->
 <div id="header"></div>
     <!-- 头部 end -->
@@ -38,29 +64,33 @@
 				
 				<!--登录错误提示消息-->
         		<div id="errorMsg" class="alert alert-danger" ></div>
-				<form id="loginForm" action="" method="post" accept-charset="utf-8">
+				<form id="loginForm" action="${path}/user?method=login" method="post" accept-charset="utf-8">
         			<input type="hidden" name="action" value="login"/>
 					<input name="username" type="text" placeholder="请输入账号" autocomplete="off">
         			<input name="password" type="text" placeholder="请输入密码" autocomplete="off">
-        			<div class="verify">
+					<div class="col-sm-6">
+						<span id="msg" style="color: red">${msg}</span>
+					</div>
+        			<%--<div class="verify">
 					<input name="check" type="text" placeholder="请输入验证码" autocomplete="off">
 					<span><img src="checkCode" alt="" onclick="changeCheckCode(this)"></span>
-					<script type="text/javascript">
-						//图片点击事件
-						function changeCheckCode(img) {
-							img.src="checkCode?"+new Date().getTime();
-						}
-					</script>
-			</div>
+						<script type="text/javascript">
+							//图片点击事件
+							function changeCheckCode(img) {
+								img.src="checkCode?"+new Date().getTime();
+							}
+						</script>
+			</div>--%>
 			<div class="submit_btn">
-        				<button type="button">登录</button>
+        				<%--<button type="button" >登录</button>--%>
+				<input type="submit" name="submit" style="width:300px;height: 40px " value="登录">
         				<div class="auto_login">
-        					<input type="checkbox" name="" class="checkbox">
+        					<input type="checkbox" name="free" class="checkbox">
         					<span>自动登录</span>
         				</div>        				
         			</div>        			       		
         		</form>
-        		<div class="reg">没有账户？<a href="javascript:;">立即注册</a></div>
+        		<div class="reg">没有账户？<a href="register.jsp">立即注册</a></div>
         	</div>
         </div>
     </section>

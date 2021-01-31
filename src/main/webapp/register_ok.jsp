@@ -15,6 +15,7 @@
         <!-- 头部 end -->
     	<div style="text-align:center;red:yellow;font-weight:bold;height:150px;padding-top:100px;font-size:30px;">
     		<h4>恭喜，注册成功！请登录您的注册邮箱进行激活您的账号，激活后才能登录。</h4>
+            <h4><a href="https://mail.qq.com/">点此跳转邮箱</a></h4>
     	</div>
         <!--引入尾部-->
     	<div id="footer"></div>

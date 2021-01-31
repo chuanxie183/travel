@@ -8,8 +8,14 @@
         <link rel="stylesheet" href="css/register.css">
 		<!--导入jquery-->
 		<script src="js/jquery-3.3.1.js"></script>
+		<script src="js/jquery.validate.min.js" type="text/javascript"></script>
+		<script src="js/validate.js" type="text/javascript"></script>
     </head>
 	<body>
+
+	<%-- 隐藏域：存储项目发布路径 --%>
+	<input type="hidden" id="path" value="${pageContext.request.contextPath}" />
+
 	<!--引入头部-->
 	<div id="header"></div>
         <!-- 头部 end -->
@@ -22,7 +28,7 @@
     			<div class="rg_form_center">
 					
 					<!--注册表单-->
-    				<form id="registerForm">
+    				<form id="registForm" action="${pageContext.request.contextPath}/user?method=regist" class="registForm" method="post">
 						<!--提交处理请求的标识符-->
 						<input type="hidden" name="action" value="register">
     					<table style="margin-top: 25px;">
@@ -31,8 +37,11 @@
     								<label for="username">用户名</label>
     							</td>
     							<td class="td_right">
-    								<input type="text" id="username" name="username" placeholder="请输入账号">
+    								<input type="text" id="username" name="username" placeholder="请输入用户名">
     							</td>
+								<td>
+
+								</td>
     						</tr>
     						<tr>
     							<td class="td_left">
@@ -83,7 +92,7 @@
     								<input type="date" id="birthday" name="birthday" placeholder="年/月/日">
     							</td>
     						</tr>
-    						<tr>
+    						<%--<tr>
     							<td class="td_left">
     								<label for="check">验证码</label>
     							</td>
@@ -97,7 +106,7 @@
                                         }
 									</script>
     							</td>
-    						</tr>
+    						</tr>--%>
     						<tr>
     							<td class="td_left"> 
     							</td>

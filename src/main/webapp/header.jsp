@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!-- 头部 start -->
     <header id="header">
@@ -6,16 +7,23 @@
         </div>
         <div class="shortcut">
             <!-- 未登录状态  -->
-            <div class="login_out">
-                <a href="login.jsp">登录</a>
-                <a href="register.jsp">注册</a>
-            </div>
-            <!-- 登录状态  -->
+
+
             <div class="login">
-            	
-                <span>欢迎回来，admin</span>
+
+                <%-- 未登录状态  --%>
+            	<c:if test="${sessionScope.user==null}">
+                    <div class="login_out">
+                        <a href="login.jsp">登录</a>
+                        <a href="register.jsp">注册</a>
+                    </div>
+                </c:if>
+                <!-- 登录状态  -->
+                <c:if test="${sessionScope.user!=null}">
+                    <span>欢迎${sessionScope.user.username}<a href="${path}/user?method=logout">登出</a></span>
+                </c:if>
+
                 <a href="myfavorite.jsp" class="collection">我的收藏</a>
-                <a href="javascript:;">退出</a>
             </div>
         </div>
         <div class="header_wrap">
