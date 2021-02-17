@@ -29,12 +29,29 @@
         <div class="header_wrap">
             <div class="topbar">
                 <div class="logo">
-                    <a href="/"><img src="images/logo.jpg" alt=""></a>
+                    <a href="/"><img src="" alt=""></a>
                 </div>
+
+                <%-- 当前若是路线列表展示，则头部页面有表单显示 --%>
+                <c:if test="${vo==null}">
+
                 <div class="search">
-                    <input name="" type="text" placeholder="请输入路线名称" class="search_input" autocomplete="off">
-                    <a href="javascript:;" class="search-button">搜索</a>
+                    <input name="rname" type="text" placeholder="请输入路线名称" id="searchName" class="search_input" autocomplete="off" value="${vo.query2}">
+                    <%--<a href="${path}/route?method=viewRouteListByCidRname&cid=${vo.query1}&rname="+$(#searchName).val() class="search-button">搜索</a>--%>
+                    <input type="button" onclick="query()" class="search-button" value="查询"/>
+
+                    <script>
+                        function query(){
+                            window.location.href="${path}/route?method=viewRouteListByCidRname&rname="+$("#searchName").val();
+                        }
+                    </script>
                 </div>
+
+
+                </c:if>
+
+
+
                 <div class="hottel">
                     <div class="hot_pic">
                         <img src="images/hot_tel.jpg" alt="">
@@ -69,7 +86,7 @@
 
             for (var i in categoryList) {  //i是集合的下标
                 //console.log("i = "+i)
-                data += "<li><a href=''>"+categoryList[i].cname+"</a></li>";
+                data += "<li><a href='${path}/route?method=viewRouteListByCidRname&cid="+categoryList[i].cid+"'>"+categoryList[i].cname+"</a></li>";
             }
             $("#categorys").html(data);
         }

@@ -88,8 +88,8 @@
 
                             <c:forEach items="${requestScope.routesNew}" var="route">
                                 <div class="col-md-3">
-                                    <a href="javascript:;">
-                                        <img src="${route.bigPic}" alt="">
+                                    <a href="${path}/route?method=selectOneRouteByRid&rid=${route.rid}">
+                                        <img src="${route.rimage}" alt="">
                                         <div class="has_border">
                                             <h3>${route.rname}</h3>
                                             <div class="price">网付价<em>￥</em><strong>${route.price}9</strong><em>起</em></div>
@@ -106,8 +106,8 @@
                         <div class="row">
                             <c:forEach items="${requestScope.routesCount}" var="route">
                                 <div class="col-md-3">
-                                    <a href="javascript:;">
-                                        <img src="${route.bigPic}" alt="">
+                                    <a href="${path}/route?method=selectOneRouteByRid&rid=${route.rid}">
+                                        <img src="${route.rimage}" alt="">
                                         <div class="has_border">
                                             <h3>${route.rname}</h3>
                                             <div class="price">网付价<em>￥</em><strong>${route.price}</strong><em>起</em></div>
@@ -123,8 +123,8 @@
                         <div class="row">
                             <c:forEach items="${requestScope.routesTheme}" var="route">
                                 <div class="col-md-3">
-                                    <a href="javascript:;">
-                                        <img src="${route.bigPic}" alt="">
+                                    <a href="${path}/route?method=selectOneRouteByRid&rid=${route.rid}">
+                                        <img src="${route.rimage}" alt="">
                                         <div class="has_border">
                                             <h3>${route.rname}</h3>
                                             <div class="price">网付价<em>￥</em><strong>${route.price}</strong><em>起</em></div>
@@ -163,8 +163,8 @@
 
                         <c:forEach items="${requestScope.routesChina}" var="route">
                             <div class="col-md-4">
-                                <a href="route_detail.jsp">
-                                    <img src="${route.bigPic}" alt="">
+                                <a href="${path}/route?method=selectOneRouteByRid&rid=${route.rid}">
+                                    <img src="${route.rimage}" alt="">
                                     <div class="has_border">
                                         <h3>${route.rname}</h3>
                                         <div class="price">网付价<em>￥</em><strong>${route.price}</strong><em>起</em></div>
@@ -196,8 +196,8 @@
 
                         <c:forEach items="${requestScope.routesOutChina}" var="route">
                             <div class="col-md-4">
-                                <a href="route_detail.jsp">
-                                    <img src="${route.bigPic}" alt="">
+                                <a href="${path}/route?method=selectOneRouteByRid&rid=${route.rid}">
+                                    <img src="${route.rimage}" alt="">
                                     <div class="has_border">
                                         <h3>${route.rname}</h3>
                                         <div class="price">网付价<em>￥</em><strong>${route.price}</strong><em>起</em></div>

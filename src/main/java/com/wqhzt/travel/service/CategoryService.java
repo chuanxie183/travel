@@ -24,9 +24,14 @@ public class CategoryService {
     }
 
     //根据路线类别id查询类别名称
-    public String viewCname(int cid){
+    public String viewCname(String cid){
         try {
-            return dao.selectOneCategory(cid);
+            if(cid.equals("")){
+                return null;
+            }else{
+                int cidInt = Integer.parseInt(cid);
+                return dao.selectOneCategory(cidInt);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -20,15 +20,12 @@ public class Route {
     private String rimage;
     private int sid;
     private String sourceld;
-    private int rgid;
-    private String bigPic;
-    private String smallPic;
 
 
     public Route() {
     }
 
-    public Route(int rid, String rname, double price, String routeIntroduce, int rflag, String rdate, int isThemeTour, int count, int cid, String rimage, int sid, String sourceld, int rgid, String bigPic, String smallPic) {
+    public Route(int rid, String rname, double price, String routeIntroduce, int rflag, String rdate, int isThemeTour, int count, int cid, String rimage, int sid, String sourceld) {
         this.rid = rid;
         this.rname = rname;
         this.price = price;
@@ -41,9 +38,6 @@ public class Route {
         this.rimage = rimage;
         this.sid = sid;
         this.sourceld = sourceld;
-        this.rgid = rgid;
-        this.bigPic = bigPic;
-        this.smallPic = smallPic;
     }
 
     /**
@@ -238,55 +232,7 @@ public class Route {
         this.sourceld = sourceld;
     }
 
-    /**
-     * 获取
-     * @return rgid
-     */
-    public int getRgid() {
-        return rgid;
-    }
-
-    /**
-     * 设置
-     * @param rgid
-     */
-    public void setRgid(int rgid) {
-        this.rgid = rgid;
-    }
-
-    /**
-     * 获取
-     * @return bigPic
-     */
-    public String getBigPic() {
-        return bigPic;
-    }
-
-    /**
-     * 设置
-     * @param bigPic
-     */
-    public void setBigPic(String bigPic) {
-        this.bigPic = bigPic;
-    }
-
-    /**
-     * 获取
-     * @return smallPic
-     */
-    public String getSmallPic() {
-        return smallPic;
-    }
-
-    /**
-     * 设置
-     * @param smallPic
-     */
-    public void setSmallPic(String smallPic) {
-        this.smallPic = smallPic;
-    }
-
     public String toString() {
-        return "Route{rid = " + rid + ", rname = " + rname + ", price = " + price + ", routeIntroduce = " + routeIntroduce + ", rflag = " + rflag + ", rdate = " + rdate + ", isThemeTour = " + isThemeTour + ", count = " + count + ", cid = " + cid + ", rimage = " + rimage + ", sid = " + sid + ", sourceld = " + sourceld + ", rgid = " + rgid + ", bigPic = " + bigPic + ", smallPic = " + smallPic + "}";
+        return "Route{rid = " + rid + ", rname = " + rname + ", price = " + price + ", routeIntroduce = " + routeIntroduce + ", rflag = " + rflag + ", rdate = " + rdate + ", isThemeTour = " + isThemeTour + ", count = " + count + ", cid = " + cid + ", rimage = " + rimage + ", sid = " + sid + ", sourceld = " + sourceld + "}";
     }
 }

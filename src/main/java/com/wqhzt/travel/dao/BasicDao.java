@@ -2,10 +2,12 @@ package com.wqhzt.travel.dao;
 
 import com.wqhzt.travel.utils.DataSourceUtils;
 import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.ArrayListHandler;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 
+import javax.sql.DataSource;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -30,13 +32,13 @@ public class BasicDao<T> {
 
     //查询列表
     public List<T> getBeanList(String sql,Class<T> clazz,Object...params) throws SQLException {
-        return runner.query(DataSourceUtils.getConnection(), sql, new BeanListHandler<T>(clazz),
-                params);
+        return runner.query(DataSourceUtils.getConnection(), sql, new BeanListHandler<T>(clazz), params);
     }
 
     //查询单个对象
     public T getBean(String sql,Class<T> clazz,Object...params) throws SQLException {
         return runner.query(DataSourceUtils.getConnection(),sql,new BeanHandler<>(clazz),params);
     }
+
 
 }
