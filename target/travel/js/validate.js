@@ -72,7 +72,7 @@ $(function(){
                 error.appendTo(element.parent().parent());
             } else {
                 //将错误信息直接插入到当前元素的后面
-                error.insertAfter(element);
+                error.insertAfter(element.parent());
             }
         },
 

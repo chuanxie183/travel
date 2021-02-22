@@ -109,14 +109,13 @@ public class RouteServlet extends BasicServlet {
         //查询图片
         List<RouteImg> routeImgs = routeImgService.viewBigPicByRid(rid);
 
-        System.out.println(routeImgs);
         //routeImgs就是图片集合
         //通过json数据传递旅游路线类别的集合
         Gson gson = new Gson();
         String routeImgsJson = gson.toJson(routeImgs);
 
-        //将json数据响应到客户端
-        response.getWriter().write(routeImgsJson);
+        /*//将json数据响应到客户端
+        response.getWriter().write(routeImgsJson);*/
 
         //只有在route_list界面才有cid
         String cid = request.getParameter("cid");
@@ -133,6 +132,8 @@ public class RouteServlet extends BasicServlet {
         //获得请求参数，搜索条件
         String rname = request.getParameter("rname");
         request.setAttribute("rname",rname);
+
+        request.setAttribute("routeImgs",routeImgs);
 
         //跳转至详情页
         request.getRequestDispatcher("route_detail.jsp").forward(request,response);

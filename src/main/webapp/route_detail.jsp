@@ -17,7 +17,7 @@
     <!-- 详情 start -->   
     <div class="wrap">
         <div class="bread_box">
-            <a href="/">首页</a>
+            <a href="${path}/route?method=index">首页</a>
             <span> &gt;</span>
             <a href="#">国内游</a><span> &gt;</span>
             <a href="#">${route.rname}</a>
@@ -25,46 +25,19 @@
         <div class="prosum_box">
             <dl class="prosum_left">
                 <dt>
-                    <img alt="" class="big_img" src="http://www.jinmalvyou.com/Public/uploads/goods_img/img_size4/201703/m49788843d72171643297ccc033d9288ee.jpg">
+                    <img alt="" class="big_img" src="${route.rimage}">
                 </dt>
                 <dd>
                     <a class="up_img up_img_disable"></a>
 
 
-                    <a title="" class="little_img cur_img" data-bigpic="${route.rimage}">
-                        <img src="${route.rimage}">
-                    </a>
-                    <c:forEach items="${picList}" var="bigPic">
-                        <a title="" class="little_img" data-bigpic="bigPic">
-                            <img src="bigPic">
+                    <c:forEach items="${routeImgs}" var="img">
+                        <a title="" class="little_img" data-bigpic="${img.bigPic}">
+                            <img src="${img.bigPic}">
                         </a>
                     </c:forEach>
 
 
-
-                    <%--
-
-                    <a title="" class="little_img" data-bigpic="http://www.jinmalvyou.com/Public/uploads/goods_img/img_size4/201703/m4531a8dbceefa2c44e6d0e35627cd2689.jpg">
-                        <img src="http://www.jinmalvyou.com/Public/uploads/goods_img/img_size2/201703/m2531a8dbceefa2c44e6d0e35627cd2689.jpg">
-                    </a>
-                    <a title="" class="little_img" data-bigpic="http://www.jinmalvyou.com/Public/uploads/goods_img/img_size4/201703/m46d8cb900e9f6c0a762aca19eae40c00c.jpg">
-                        <img src="http://www.jinmalvyou.com/Public/uploads/goods_img/img_size2/201703/m26d8cb900e9f6c0a762aca19eae40c00c.jpg">
-                    </a>
-                    <a title="" class="little_img" data-bigpic="http://www.jinmalvyou.com/Public/uploads/goods_img/img_size4/201703/m45ea00f6eba562a767b5095bbf8cffe07.jpg" style="display:none;">
-                        <img src="http://www.jinmalvyou.com/Public/uploads/goods_img/img_size2/201703/m25ea00f6eba562a767b5095bbf8cffe07.jpg">
-                    </a>
-                    <a title="" class="little_img" data-bigpic="http://www.jinmalvyou.com/Public/uploads/goods_img/img_size4/201703/m4265ec488cd1bc7ce749bc8c9b34b87bc.jpg" style="display:none;">
-                        <img src="http://www.jinmalvyou.com/Public/uploads/goods_img/img_size2/201703/m2265ec488cd1bc7ce749bc8c9b34b87bc.jpg">
-                    </a>
-                    <a title="" class="little_img" data-bigpic="http://www.jinmalvyou.com/Public/uploads/goods_img/img_size4/201703/m4e7e964909d7dd1a9f6e5494d4dc0c847.jpg" style="display:none;">
-                        <img src="http://www.jinmalvyou.com/Public/uploads/goods_img/img_size2/201703/m2e7e964909d7dd1a9f6e5494d4dc0c847.jpg">
-                    </a>
-                    <a title="" class="little_img" data-bigpic="http://www.jinmalvyou.com/Public/uploads/goods_img/img_size4/201703/m467db00e1b76718fab0fe8b96e10f4d35.jpg" style="display:none;">
-                        <img src="http://www.jinmalvyou.com/Public/uploads/goods_img/img_size2/201703/m267db00e1b76718fab0fe8b96e10f4d35.jpg">
-                    </a>
-                    <a title="" class="little_img" data-bigpic="http://www.jinmalvyou.com/Public/uploads/goods_img/img_size4/201703/m487bbbc6e43eba6aa6a36cc1a182f7a20.jpg" style="display:none;">
-                        <img src="http://www.jinmalvyou.com/Public/uploads/goods_img/img_size2/201703/m287bbbc6e43eba6aa6a36cc1a182f7a20.jpg">
-                    </a>--%>
                     <a class="down_img down_img_disable" style="margin-bottom: 0;"></a>
                 </dd>
             </dl>
@@ -79,10 +52,10 @@
                 <div class="pros_price">
                     <p class="price"><strong>¥${route.price}</strong><span>起</span></p>
                     <p class="collect">
-                        <a class="btn"><i class="glyphicon glyphicon-heart-empty"></i>点击订购</a>
+                        <a class="btn"><i class="glyphicon glyphicon-heart-empty"></i>点击收藏</a>
 
                         <a  class="btn already" disabled="disabled"><i class="glyphicon glyphicon-heart-empty"></i>点击收藏</a>
-                        <span>已收藏100次</span>
+                        <span>已收藏${route.count}次</span>
                     </p>
                 </div>        
             </div>
@@ -121,7 +94,10 @@
     <script src="js/bootstrap.min.js"></script>
     <!--导入布局js，共享header和footer-->
     <script type="text/javascript" src="js/include.js"></script>
+
     <script>
+
+
     $(document).ready(function() {
         //焦点图效果
         //点击图片切换图片
@@ -131,6 +107,7 @@
             $('.big_img').attr('src', big_pic);
             $(this).addClass('cur_img');
         });
+
            //上下切换
         var picindex = 0;
         var nextindex = 4;
@@ -156,6 +133,7 @@
          var timer = setInterval("auto_play()", 5000);
     });
 
+
     //自动轮播方法
     function auto_play() {
         var cur_index = $('.prosum_left dd').find('a.cur_img').index();
@@ -179,20 +157,7 @@
         }
     }
 
-    /*var data = "";
-    $.ajax({
-        type:"get",
-        url:"${path}/route?method=selectOneRouteByRid",
-        dataType:"routeImgsJson",
-        success:function(categoryList){
-            for (var i in categoryList) {  //i是集合的下标
-                //console.log("i = "+i)
-                data += "<li><a href='${path}/product?method=viewProductListByCidPname&cid="+categoryList[i].cid+"'>"+categoryList[i].cname+"</a></li>";
-            }
-            $("#categorys").html(data);
-        }
-    });
-*/
+
 
     </script>
 </body>
